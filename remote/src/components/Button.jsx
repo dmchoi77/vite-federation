@@ -1,12 +1,12 @@
-import { useState } from "react";
+import useCount from "../store/countStore";
 
 export default function Button() {
-  const [state, setState] = useState(0);
+  const [state, setState] = useCount(0);
 
   return (
     <div>
       <button className="shared-btn" onClick={() => setState((s) => s + 1)}>
-        Click me: {state}
+        Click remote button: {state}
       </button>
     </div>
   );
